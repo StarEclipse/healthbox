@@ -1,0 +1,11 @@
+.navbar-nav{
+  flex-direction: row;
+}
+
+
+.logo-img{
+  width: 58px;
+  @include media-breakpoint-up(lg){
+    width: 129px;
+  }
+}

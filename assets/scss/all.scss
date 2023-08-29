@@ -1,0 +1,45 @@
+// 1. 首先包含功能函數（這樣你可以操作顏色、SVG、計算等）
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. 包含所需的 Bootstrap 樣式表的其餘部分（包括任何單獨的顏色模式樣式表）
+@import "./utils/variables";
+@import "./utils/variables-dark";
+
+// 3 .必備工具部分
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// 4. 自訂義工具位置
+@import "./utils/utilities";
+
+// 5. Bootstrap 全部載入
+@import "../../node_modules/bootstrap";
+
+// 6. 自訂義位置 ===========================================================
+// mixins -
+@import './mixins/mixin';
+
+// base -
+@import './base/base.scss';
+
+// helper -
+@import './helpers/tools';
+
+// config -
+@import './config/font-size';
+
+// components
+@import './components/navbar-top';
+@import './components/button';
+
+// plugins 
+@import './plugins/swiper';
+
+// layout -
+@import './layout/header';
+@import './layout/footer';
+
+// pages -
+@import './pages/index.scss';
+
+

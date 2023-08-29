@@ -1,0 +1,98 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: #E07507 !important;
+  @include media-breakpoint-up(lg){
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+}
+
+.swiper-pagination {
+  // bottom: 60px !important;
+  @include media-breakpoint-up(lg){
+    bottom: 60px !important;
+  }
+}
+
+.swiper-button-next, .buy-swiper-button-next {
+  background-image: url('../images/next-empty.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 36px; /* 設置適當的寬度和高度 */
+  height: 36px;
+  position: absolute;
+  right: 10px; /* 將右箭頭向右移動 -70px */
+  top: 75%; 
+  transform: translateY(-50%); /* 調整垂直居中 */
+  &::after{
+    content:"" !important;
+  }
+  @include media-breakpoint-up(lg){
+    // right: -70px;
+    width: 56px; /* 設置適當的寬度和高度 */
+    height: 56px;
+  }
+}
+
+.swiper-button-prev, .buy-swiper-button-prev {
+  background-image: url('../../assets/images/back-empty.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 36px; /* 設置適當的寬度和高度 */
+  height: 36px;
+  position: absolute;
+  left: 10px; /* 將左箭頭向左移動 -70px */
+  top: 75%; 
+  transform: translateY(-50%); /* 調整垂直居中 */
+  &::after{
+    content:"" !important;
+  }
+  @include media-breakpoint-up(lg){
+    // left:-70px;
+    width: 56px; /* 設置適當的寬度和高度 */
+    height: 56px;
+  }
+}
+
+/*最後一張或是第一張時，按鈕顯示淡化*/
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.buy-swiper-button-next.swiper-button-disabled, .buy-swiper-button-prev.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
+}
+
+
+.vertical-stack .swiper-wrapper {
+  flex-direction: column;
+}
+
+.vertical-stack .swiper-slide {
+  width: 100%;
+}
